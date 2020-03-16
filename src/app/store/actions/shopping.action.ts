@@ -1,4 +1,4 @@
-import { Action, createAction, props } from "@ngrx/store";
+import { Action, createAction, props } from '@ngrx/store';
 import { ShoppingItem } from '../models/shopping-item.model';
 
 export enum ShoppingActionTypes {
@@ -48,13 +48,13 @@ export class DeleteItemAction implements Action {
 }
 
 export class DeleteItemSuccessAction implements Action {
-    readonly type = ShoppingActionTypes.DELETE_ITEM_SUCCESS
+    readonly type = ShoppingActionTypes.DELETE_ITEM_SUCCESS;
     constructor(public payload: { id: string }) { }
 }
 
 export class DeleteItemFailureAction implements Action {
-    readonly type = ShoppingActionTypes.DELETE_ITEM_FAILURE
-    constructor(public payload: string) { }
+    readonly type = ShoppingActionTypes.DELETE_ITEM_FAILURE;
+    constructor(public payload: Error) { }
 }
 
 export type ShoppingAction =
